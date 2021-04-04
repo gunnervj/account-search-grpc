@@ -3,11 +3,15 @@
 gRPC developed by Google is gaining a lot of traction these days since it can use protocol buffers for data serialization. This makes the 
 payloads smaller, faster and simple. Various tests shows gRPC to be much faster than REST based applications.
 
-- It is built on Protocol Buffer
-- HTTP 2
+gRPC: 
+
+- It is built on Protocol Buffer(Protobuf)
+- Mutiplex many requests with one connection through HTTP 2
 - In-Born code generation in numerous languages
 - Smaller payload
+- Header compression
 - Faster message transmission
+- Binary protocol
 
 A plain gRPC service could be slower in terms of implementation perspective since we are used to quick development of 
 APIs with frameworks such as Springboot etc. However, with [grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot-starter)
@@ -125,10 +129,14 @@ message SearchResponse {
 I have packaged everything as containers for the ease of running.
 
 1) Create the java classes from the proto files
-    
-    Run `` ./gradlew generateProto `` 
    
-    [ You can find the code under build/genrated/source/proto folder ]
+   ```
+   shell ./gradlew generateProto 
+   
+   ```
+   
+   [ You can find the code under build/genrated/source/proto folder ]
+
 
 2) Compile 
 
