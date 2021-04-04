@@ -6,7 +6,7 @@ payloads smaller, faster and simple. Various tests shows gRPC to be much faster 
 gRPC: 
 
 - It is built on Protocol Buffer(Protobuf)
-- Mutiplex many requests with one connection through HTTP 2
+- Mutiplex many requests with one connection through HTTP/2
 - In-Born code generation in numerous languages
 - Smaller payload
 - Header compression
