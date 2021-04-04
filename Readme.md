@@ -131,7 +131,7 @@ I have packaged everything as containers for the ease of running.
 1) Create the java classes from the proto files
    
    ```
-   shell ./gradlew generateProto 
+   ./gradlew generateProto 
    
    ```
    
