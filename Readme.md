@@ -138,37 +138,31 @@ I have packaged everything as containers for the ease of running.
    [ You can find the code under build/genrated/source/proto folder ]
 
 
-2) Compile 
+2) Generate docker image
 
    ```shell
-    ./gradlew clean build
+   docker build . -t docker build . -t <update your tag name> 
    ```
 
-3) Create Uber/Fat jar
-
-   ```shell
-   ./gradlew shadowJar
-   ```
-
-4) Create a docker network
+3) Create a docker network
 
    ```shell
    docker network create -d bridge account-bridge-nw
    ```
 
-5) Export env variables
+4) Export env variables
 
    ```shell
     export ELASTIC_HOSTS=http://elastic:9200
    ```
-6) Run elastic search container
+5) Run elastic search container
 
    ```
    docker run -itd -p 9200:9200 --network=account-bridge-nw --name=elastic  vnair5/elastic-search
    ```
     I have preloaded the container elastic search with index and data.
     
-7) Run the gRPC service
+6) Run the gRPC service
     ```
     docker run -itd -p 50051:50051 --env ELASTIC_HOSTS --network=account-bridge-nw vnair5/account-search-service:latest
     ```
