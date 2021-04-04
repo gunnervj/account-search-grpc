@@ -1,6 +1,6 @@
 package com.bbb.grpc.account;
 
-import com.bbb.grpc.account.service.AccountSearchImpl;
+import com.bbb.grpc.account.service.AccountSearchServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -12,7 +12,7 @@ public class AccountServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         logger.info("Initializing AccountServer");
         Server server = ServerBuilder.forPort(50051)
-                .addService(new AccountSearchImpl())
+                .addService(new AccountSearchServiceImpl())
                 .build();
         logger.info("Starting AccountServer");
         server.start();

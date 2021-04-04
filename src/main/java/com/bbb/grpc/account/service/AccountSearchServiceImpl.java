@@ -13,12 +13,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class AccountSearchImpl extends AccountSearchServiceGrpc.AccountSearchServiceImplBase {
-    private final Logger logger = Logger.getLogger(AccountSearchImpl.class.getName());
+public class AccountSearchServiceImpl extends AccountSearchServiceGrpc.AccountSearchServiceImplBase {
+    private final Logger logger = Logger.getLogger(AccountSearchServiceImpl.class.getName());
     private final AccountDao accountDao;
     private final String RESPONSE_KEY = "response";
     private final String SEARCH_AFTER_KEY = "searchAfter";
-    public AccountSearchImpl() {
+
+    public AccountSearchServiceImpl() {
         this.accountDao = new AccountDao();
     }
 
