@@ -1,13 +1,13 @@
 # gRPC Microservice with Java
 
 gRPC developed by Google is gaining a lot of traction these days since it can use protocol buffers for data serialization. This makes the 
-payloads smaller, faster and simple. Various tests shows gRPC to be much faster than REST based applications.
+payloads smaller, faster and simple. Various tests shows gRPC to be much faster(more than 10x) than REST based applications.
 
 gRPC: 
 
 - It is built on Protocol Buffer(Protobuf)
-- Mutiplex many requests with one connection through HTTP/2
-- In-Born code generation in numerous languages
+- Multiplex many requests with one connection through HTTP/2
+- In built code generation for numerous languages
 - Smaller payload
 - Header compression
 - Faster message transmission
