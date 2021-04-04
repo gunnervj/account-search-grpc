@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package account;
+
+option java_multiple_files = true;
+option java_package = "com.bbb.grpc.account.beans";
+
+message Account {
+  string name = 1;
+  string alter_ego = 2;
+  string role = 3;
+  string comic = 4;
+  string affiliation = 5;
+}

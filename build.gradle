@@ -1,0 +1,80 @@
+plugins {
+    id 'java'
+    id 'com.google.protobuf' version '0.8.15'
+    id 'idea'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+group 'com.bbb.grpc.account'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://snapshots.elastic.co/maven/"
+    }
+}
+
+dependencies {
+    implementation 'io.grpc:grpc-netty:1.36.0'
+    implementation 'io.grpc:grpc-protobuf:1.36.0'
+    implementation 'io.grpc:grpc-stub:1.36.0'
+    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.12.0'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+/*
+* REFER
+* https://github.com/grpc/grpc-java
+*
+* */
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.12.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.36.0'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
+
+
+shadowJar {
+    archiveBaseName.set('account-search-service')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.bbb.grpc.account.AccountServer'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

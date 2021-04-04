@@ -1,0 +1,198 @@
+GET _search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+DELETE /accounts
+
+PUT /accounts
+
+GET /accounts/_search
+
+PUT /accounts/_doc/1
+{
+  "name" : "Super Man",
+  "alter_ego" : "Kal-El",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League"
+}
+
+PUT /accounts/_doc/2
+{
+  "name" : "Captain America",
+  "alter_ego" : "Steven Rogers",
+  "type": "Hero",
+  "comic":  "Marvel",
+  "affiliation": "Avengers"
+}
+
+PUT /accounts/_doc/3
+{
+  "name" : "Doctor Doom",
+  "alter_ego" : "Victor Von Doom",
+  "type": "Villain",
+  "comic":  "Marvel",
+  "affiliation": "Sorcerers Supreme"
+}
+
+PUT /accounts/_doc/4
+{
+  "name" : "Brainiac",
+  "alter_ego" : "Vril Dox",
+  "type": "Villain",
+  "comic":  "DC",
+  "affiliation": "Anti-Justice League Legion of Doom"
+}
+
+PUT /accounts/_doc/5
+{
+  "name" : "Lex Luthor",
+  "alter_ego" : "Alexander Joseph Luthor",
+  "type": "Villain",
+  "comic":  "DC",
+  "affiliation": "Injustice League"
+}
+
+PUT /accounts/_doc/6
+{
+  "name" : "Martian Manhunter",
+  "alter_ego" : "J'onn J'onzz",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League"
+}
+
+PUT /accounts/_doc/7
+{
+  "name" : "Atom",
+  "alter_ego" : "Ray Palmer",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League"
+}
+
+PUT /accounts/_doc/8
+{
+  "name" : "Doctor Strange",
+  "alter_ego" : "Stephen Vincent Strange",
+  "type": "Hero",
+  "comic":  "Marvel",
+  "affiliation": "Sorcerers Supreme"
+}
+
+
+PUT /accounts/_doc/9
+{
+  "name" : "Vision",
+  "alter_ego" : "Victor Shade",
+  "type": "Hero",
+  "comic":  "Marvel",
+  "affiliation": "Avengers"
+}
+
+
+PUT /accounts/_doc/10
+{
+  "name" : "Green Arrow",
+  "alter_ego" : "Oliver Jonas Queen",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League"
+}
+
+
+PUT /accounts/_doc/11
+{
+  "name" : "Black Canary",
+  "alter_ego" : "Dinah Laurel Lance",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League Task Force Birds of Prey"
+}
+
+PUT /accounts/_doc/12
+{
+  "name" : "Flash",
+  "alter_ego" : "Barry Allen",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League"
+}
+
+
+PUT /accounts/_doc/13
+{
+  "name" : "Darkseid",
+  "alter_ego" : "Uxas",
+  "type": "Villain",
+  "comic":  "DC",
+  "affiliation": "Legion of Doom"
+}
+
+
+PUT /accounts/_doc/14
+{
+  "name" : "Beta Ray Bill",
+  "alter_ego" : "Beta Ray Bill",
+  "type": "Hero",
+  "comic":  "Marvel",
+  "affiliation": "Guardians of the Galaxy"
+}
+
+PUT /accounts/_doc/15
+{
+  "name" : "Red Hulk",
+  "alter_ego" : "Thunderbolt Ross",
+  "type": "Hero",
+  "comic":  "Marvel",
+  "affiliation": "Avengers"
+}
+
+PUT /accounts/_doc/16
+{
+  "name" : "Thor",
+  "alter_ego" : "Thor",
+  "type": "Hero",
+  "comic":  "Marvel",
+  "affiliation": "Avengers"
+}
+
+PUT /accounts/_doc/17
+{
+  "name" : "Loki",
+  "alter_ego" : "Loki",
+  "type": "Villain",
+  "comic":  "Marvel",
+  "affiliation": "Avengers"
+}
+
+PUT /accounts/_doc/18
+{
+  "name" : "Batman",
+  "alter_ego" : "Bruce Wayne",
+  "type": "Hero",
+  "comic":  "DC",
+  "affiliation": "Justice League"
+}
+
+
+PUT /accounts/_doc/19
+{
+  "name" : "Joker",
+  "alter_ego" : "Jack Napier",
+  "type": "Villain",
+  "comic":  "DC",
+  "affiliation": "InJustice League"
+}
+
+PUT /accounts/_doc/20
+{
+  "name" : "Reverse-Flash",
+  "alter_ego" : "Eobard Thawne",
+  "type": "Villain",
+  "comic":  "DC",
+  "affiliation": "Legion of Doom"
+}

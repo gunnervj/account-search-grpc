@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package account;
+
+import "account/account.proto";
+
+option java_multiple_files = true;
+option java_package = "com.bbb.grpc.account.beans";
+
+message SearchRequest {
+  repeated SearchKey search_field = 1;
+}
+
+message SearchKey {
+  string name = 1;
+  string value = 2;
+}
+
+
+message SearchResponse {
+  repeated Account accounts = 1;
+  int32 records_found = 2;
+}

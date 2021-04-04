@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package account;
+
+import "account/account-search.proto";
+
+option java_multiple_files = true;
+option java_package = "com.bbb.grpc.account.service";
+
+service AccountSearchService {
+  rpc accountSearch(SearchRequest) returns (stream SearchResponse) {};
+}
