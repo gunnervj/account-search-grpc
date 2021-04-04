@@ -41,7 +41,7 @@ time will make sure that we keep our resource utilization at bay.
 
 ```mermaid
     sequenceDiagram
-    Client ->> account-search-grpc: RPC Request
+    Client -->> account-search-grpc: RPC Request
     account-search-grpc-->>elastic-search: Query
     elastic-search-->>account-search-grpc: First 5 results (Total 10 results)
     account-search-grpc-->>Client: stream first 5 results
