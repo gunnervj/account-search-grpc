@@ -164,7 +164,7 @@ I have packaged everything as containers for the ease of running.
     
 6) Run the gRPC service
     ```
-    docker run -itd -p 50051:50051 --env ELASTIC_HOSTS --network=account-bridge-nw vnair5/account-search-service:latest
+    docker run -itd -p 50051:50051 --env ELASTIC_HOSTS --network=account-bridge-nw <update image:tag from step2> 
     ```
 
 Now you can make requests to the service to test the same. 
