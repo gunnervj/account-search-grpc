@@ -37,13 +37,13 @@ time will make sure that we keep our resource utilization at bay.
 
 ```mermaid
     sequenceDiagram
-    Client ->> account-search: RPC Request
-    account-search-->>elastic-search: Query
-    elastic-search-->>account-search: First 5 results (Total 10 results)
-    account-search-->>Client: stream first 5 results
-    account-search-->>elastic-search: Query for Next 5
-    elastic-search-->>account-search: Next 5 results
-    account-search-->>Client: stream next 5 results and close stream.
+    Client ->> account-search-grpc: RPC Request
+    account-search-grpc-->>elastic-search: Query
+    elastic-search-->>account-search-grpc: First 5 results (Total 10 results)
+    account-search-grpc-->>Client: stream first 5 results
+    account-search-grpc-->>elastic-search: Query for Next 5
+    elastic-search-->>account-search-grpc: Next 5 results
+    account-search-grpc-->>Client: stream next 5 results and close stream.
 ```
 
 The service is defined in the search.proto file.
